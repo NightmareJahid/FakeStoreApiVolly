@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="7"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:weightSum="6"
+                android:orientation="horizontal">
+                
+                <ImageView
+                    android:id="@+id/imageId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:src="@drawable/ic_launcher_background"
+                    android:scaleType="fitXY"/>
+                
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titleId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="title"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:id="@+id/categoryId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="category"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                    </LinearLayout>-->
+                    
+                </ScrollView>
+
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/descriptionId"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textStyle="italic"
+                android:text="hello this is the description"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
